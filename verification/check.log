@@ -1,0 +1,29 @@
+python3 tools/check_multiboot.py kernel.bin
+PASS: Multiboot video request mode_type=0, width=0, height=0, depth=32
+PASS: Multiboot v1 header found at 0x1000; flags=0x00000007
+PASS: little-endian ELF32 image
+python3 verification/static_audit.py
+PASS: boot installs own GDT
+PASS: boot code selector is 0x08
+PASS: boot data selector is 0x10
+PASS: IDT uses code selector 0x08
+PASS: ISR uses data selector 0x10
+PASS: heap uses Multiboot memory map
+PASS: heap has mem_upper fallback
+PASS: ATA public interface is read-only
+PASS: ATA write implementation absent
+PASS: IRQ handler does not render
+PASS: main loop processes queued input
+PASS: main loop redraws outside IRQ
+python3 tools/check_myos_setup.py
+PASS: Setup has five pages
+PASS: CPU information uses CPUID
+PASS: CPU vendor and brand are collected
+PASS: Memory information reads Multiboot map
+PASS: Boot information reads Multiboot boot device
+PASS: F2 opens Setup during boot
+PASS: F2 opens Setup after boot
+PASS: Start Settings opens Setup
+PASS: Setup supports mouse tab selection
+PASS: Setup supports keyboard navigation
+PASS: Hardware tuning is not falsely exposed

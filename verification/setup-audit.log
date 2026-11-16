@@ -1,0 +1,11 @@
+PASS: Setup has five pages
+PASS: CPU information uses CPUID
+PASS: CPU vendor and brand are collected
+PASS: Memory information reads Multiboot map
+PASS: Boot information reads Multiboot boot device
+PASS: F2 opens Setup during boot
+PASS: F2 opens Setup after boot
+PASS: Start Settings opens Setup
+PASS: Setup supports mouse tab selection
+PASS: Setup supports keyboard navigation
+PASS: Hardware tuning is not falsely exposed
